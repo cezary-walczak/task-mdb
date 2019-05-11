@@ -1,0 +1,76 @@
+// __________variables__________
+    
+    // font sizes
+    font = 1.5rem
+    font1 = font
+    font2 = font*font
+    font3 = font*font*font
+    font4 = font*font*font*font
+    font5 = font*font*font*font*font
+    font6 = font*font*font*font*font*font
+
+    // colors
+    color1 = #323740
+    color2 = #ff4500
+    color3 = #FFFFFF
+
+// __________mixins__________
+
+    fullscreen(w, h, p)
+        width w
+        min-height h
+        padding p
+
+// __________layout__________
+
+    // general
+    *,
+    *::after,
+    *::before
+        margin: 0
+        padding: 0
+        border: 0
+        box-sizing: border-box
+        
+// __________typography__________
+
+    // general typography
+    html,
+    body
+        font-family 'Montserrat', 'Avenir', Helvetica, Arial, sans-serif
+        font-weight 300
+        font-size 62.5% // 1rem = 10px
+        line-height 1.5
+        letter-spacing 0rem
+        color color1
+
+        // smoothing font
+        text-rendering optimizeLegibility
+        -webkit-font-smoothing antialiased
+        -moz-osx-font-smoothing grayscale
+        font-smoothing antialiased
+        font-smooth antialiased
+
+    // headings
+    h1
+        font-size font6
+    h2
+        font-size font5
+    h3
+        font-size font4
+    h4
+        font-size font3
+    h5
+        font-size font2
+    h6
+        font-size font1
+
+    // paragraphs, links, lists
+    p, a, li
+        font-size font1
+        text-decoration none
+        cursor pointer
+
+    // inputs, textarea
+    input, textarea
+        font-size font1
