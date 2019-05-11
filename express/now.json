@@ -1,18 +1,17 @@
 {
     "version": 2,
-    "name": "express",
-    "builds": [
-        { "src": "**/*.js", "use": "@now/node" }
-    ],
+    "name": "task-mdb-express",
+    "builds": [{ 
+        "src": "**/*.js",
+        "use": "@now/node"
+    }],
     "build": {
-        "env": {
-            "DB_CONNECTION": "mongodb+srv://task-mdb:task-mdb@cluster0-t56s5.mongodb.net/test?retryWrites=true"
-        }
+        "env": { "DB_CONNECTION": "mongodb+srv://task-mdb:task-mdb@cluster0-t56s5.mongodb.net/test?retryWrites=true" }
     },
     "env": {
         "DB_CONNECTION": "mongodb+srv://task-mdb:task-mdb@cluster0-t56s5.mongodb.net/test?retryWrites=true"
     },
-    "routes": [
-        { "src": "/.*", "dest": "/" }
-    ]
+    "routes": [{ 
+        "src": "/.*", "dest": "/"
+    }]
 }
