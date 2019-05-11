@@ -3,13 +3,15 @@
 
     <form @submit.prevent="clearForm">
       <input type="text" v-model="newTask" @focus="newTask = ''">
-      <button @click="$emit('createNewTask', {newTask})">Dodaj</button>
-      <button @click="$emit('removeLastTask')">Usuń</button>
-      <button @click="$emit('purgeTasksArray')">Wyczyść</button>
+      <button @click="$emit('createNewTask', {newTask})">Add</button>
+      <button @click="$emit('removeLastTask')">Remove</button>
+      <button @click="$emit('purgeTasksArray')">Clear</button>
     </form>
 
     <div v-for="task in tasks" :key="task._id">
+      
       <Task :task="task"/>
+      
     </div>
 
   </section>
@@ -26,12 +28,12 @@ export default {
   props: ["tasks"],
   data() {
     return {
-      newTask: 'Wpisz nazwę zadania:'
+      newTask: 'Enter task name...'
     }
   },
   methods: {
     clearForm() {
-      this.newTask = 'Wpisz nazwę zadania:'
+      this.newTask = 'Enter task name...'
     }
   }
 }
